@@ -52,7 +52,7 @@ stages{
           withCredentials([string(credentialsId: 'github', variable: 'GIT_AUTH_TOKEN')]) {
             sh 'git config user.email = "krishnakanuri1@gmail.com"'
             sh 'git config user.name = "krishna-1995"'
-            BUILD_NUMBER=${Build_NUMBER}
+  
             sh 'sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml'
             sh 'git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml'
             sh 'git commit -m "update new image version in deployment file" '
