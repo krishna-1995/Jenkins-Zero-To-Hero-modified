@@ -10,7 +10,7 @@ stages{
       //checkout scmGit(branches: [[name: '*/TEST']], extensions: [], userRemoteConfigs: [[name: 'github', url: 'https://github.com/krishna-1995/Jenkins-Zero-To-Hero-modified/']])
     }
   }
-  stage('build and test){
+  stage('build and test'){
     steps{
       sh 'ls -lrth'
       sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean install'
