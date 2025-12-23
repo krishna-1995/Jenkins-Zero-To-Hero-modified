@@ -50,7 +50,7 @@ stages{
        steps{
           script {
           withCredentials([string(credentialsId: 'github', variable: 'GIT_AUTH_TOKEN')]) {
-            sh 'git config user.email - "krishnakanuri1@gmail.com"'
+            sh 'git config user.email = "krishnakanuri1@gmail.com"'
             sh 'git config user.name = "krishna-1995"'
             BUILD_NUMBER=${Build_NUMBER}
             sh 'sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml'
