@@ -26,7 +26,7 @@ stages{
         }
       }
      }
-   stage('build and push docek image'){
+   stage('build and push docker image'){
      environment{
         DOCKER_IMAGE = "nagakrishna95/ultimate-cicd:${BUILD_NUMBER}"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
