@@ -1,1 +1,18 @@
-ap
+apiVersion:
+kind: service
+metadata:
+  name: spring-boot-app-service
+
+spec:
+  type: nodeport
+  ports:
+    name: http
+    port: 80
+    targetport: 8080
+    protocal: tcp
+  selector:
+    app: spring-boot-app
+
+
+
+    
