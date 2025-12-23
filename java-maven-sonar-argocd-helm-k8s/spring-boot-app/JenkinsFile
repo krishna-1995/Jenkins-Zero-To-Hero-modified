@@ -39,7 +39,7 @@ stages{
          }
        }
    }
-   stage('update the deployment file"){
+   stage('update the deployment file'){
       environment{
         GIT_REPO_NAME = "Jenkins-Zero-To-Hero-modified"
         GIT_USER_NAME = "krishna-1995"
