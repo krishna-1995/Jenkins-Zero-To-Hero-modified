@@ -47,6 +47,7 @@ stages{
         GIT_USER_NAME = "krishna-1995"
       }
        steps{
+          script {
           withCredentials([string(credentialsId: 'github', variable: 'GIT_AUTH_TOKEN')]) {
             sh 'git config user.email - "krishnakanuri1@gmail.com"'
             sh 'git config user.name = "krishna-1995"'
@@ -55,7 +56,8 @@ stages{
             sh 'git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml'
             sh 'git commit -m "update new image version in deployment file" '
             sh 'git push https://${GIT_AUTH_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:TEST'
-        } 
+        }
+        }
        }
    }
 }
