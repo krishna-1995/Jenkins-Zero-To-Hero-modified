@@ -1,17 +1,13 @@
-apiVersion: app/v1
+apiVersion: v1
 kind: Service
 metadata:
   name: spring-boot-app-service
 spec:
-  type: NodePort
-  ports:
-  - name: http
-    port: 80
-    targetPort: 80
-    protocal: tcp
   selector:
-    app: spring-boot-app
-
-
-
-    
+    app: spring-boot-app 
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort    
