@@ -7,7 +7,7 @@ spec:
   ports:
   - name: http
     port: 80
-    targetport: 8080
+    targetPort: 8080
     protocal: tcp
   selector:
     app: spring-boot-app
